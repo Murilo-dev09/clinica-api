@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
+
 public record DadosEndereco(
         @NotBlank(message = "Logradouro não pode ser vazio.")
         String logradouro,
