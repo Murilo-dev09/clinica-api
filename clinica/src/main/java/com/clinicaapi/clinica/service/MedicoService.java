@@ -18,7 +18,7 @@ public class MedicoService {
     private MedicoRepository repository;
 
     @Transactional
-    public Medico Cadastrar (DadosCadastroMedico dados){
+    public Medico cadastrar (DadosCadastroMedico dados){
         var medico = new Medico(dados);
         repository.save(medico);
         return medico;
@@ -29,7 +29,7 @@ public class MedicoService {
     }
 
     @Transactional
-    public Medico Atualizar (DadosAtualizacaoMedico dados){
+    public Medico atualizar (DadosAtualizacaoMedico dados){
         var medico = repository.getReferenceById(dados.id());
         medico.atualizarInformacoes(dados);
         return medico;
