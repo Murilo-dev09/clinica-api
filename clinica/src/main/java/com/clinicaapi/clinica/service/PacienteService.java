@@ -6,12 +6,14 @@ import com.clinicaapi.clinica.model.paciente.DadosListagemPaciente;
 import com.clinicaapi.clinica.model.paciente.Paciente;
 import com.clinicaapi.clinica.repository.PacienteRepository;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class PacienteService {
 
     @Autowired

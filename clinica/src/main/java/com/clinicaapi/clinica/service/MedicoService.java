@@ -5,6 +5,7 @@ import com.clinicaapi.clinica.model.medico.DadosCadastroMedico;
 import com.clinicaapi.clinica.model.medico.DadosListagemMedico;
 import com.clinicaapi.clinica.model.medico.Medico;
 import com.clinicaapi.clinica.repository.MedicoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@RequiredArgsConstructor
 public class MedicoService {
 
     @Autowired
