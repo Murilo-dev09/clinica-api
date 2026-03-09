@@ -88,8 +88,14 @@ public class ConsultaService {
     }
 
     public Page<DadosListagemConsulta> listarAgendadas(Pageable paginacao) {
-        // Aqui você passa o valor fixo do seu Enum
+
         return consultaRepository.findAllByStatus(StatusConsulta.AGENDADA, paginacao)
+                .map(DadosListagemConsulta::new);
+    }
+
+    public Page<DadosListagemConsulta> listarRealizadas(Pageable paginacao) {
+
+        return consultaRepository.findAllByStatus(StatusConsulta.REALIZADA, paginacao)
                 .map(DadosListagemConsulta::new);
     }
 }

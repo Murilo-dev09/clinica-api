@@ -36,9 +36,15 @@ public class ConsultaController {
         service.atualizarConsultasFinalizadas();
     }
 
-    @GetMapping
-    public ResponseEntity<Page<DadosListagemConsulta>> listar(@PageableDefault(size = 10, sort = {"data"}) Pageable paginacao){
+    @GetMapping("/listar-agendadas")
+    public ResponseEntity<Page<DadosListagemConsulta>> listarAgendadas(@PageableDefault(size = 10, sort = {"data"}) Pageable paginacao){
         var pagina = service.listarAgendadas(paginacao);
+        return ResponseEntity.ok(pagina);
+    }
+
+    @GetMapping("/listar-realizadas")
+    public ResponseEntity<Page<DadosListagemConsulta>> listarRealizadas(@PageableDefault(size = 10, sort = {"data"}) Pageable paginacao){
+        var pagina = service.listarRealizadas(paginacao);
         return ResponseEntity.ok(pagina);
     }
 }
