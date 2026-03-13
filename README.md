@@ -49,6 +49,12 @@ Configurar o MySQL para suportar caracteres UTF-8 (ou conforme sua necessidade).
 git clone https://github.com/Murilo-dev09/clinica-api.git
 
 
+# 📄 Documentação da API
+
+Swagger disponível em:
+http://localhost:8080/swagger-ui/index.html(logo mais estara em deploy)
+
+
 👨‍💻 Autor
 Desenvolvido por Murilo
 Estudante de Engenharia de Software

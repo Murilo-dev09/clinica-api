@@ -6,6 +6,7 @@ import com.clinicaapi.clinica.model.medico.DadosDetalhamentoMedico;
 import com.clinicaapi.clinica.model.medico.DadosListagemMedico;
 import com.clinicaapi.clinica.service.MedicoService;
 import jakarta.validation.Valid;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -37,7 +38,7 @@ public class MedicoController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
+    public ResponseEntity<Page<DadosListagemMedico>> listar(@ParameterObject  @PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
         return ResponseEntity.ok(service.listar(paginacao));
 
     }
@@ -57,7 +58,7 @@ public class MedicoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DadosDetalhamentoMedico> detalhar(@PathVariable Long id){
+    public ResponseEntity<DadosDetalhamentoMedico> detalhar(@ParameterObject @PathVariable Long id){
         var medico = service.detalhar(id);
         return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
