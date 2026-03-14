@@ -6,6 +6,27 @@ A API permite gerenciar uma clínica médica, incluindo cadastro de médicos, pa
 
 ---
 
+## 🚀 Link de Acesso
+
+A API está documentada e disponível para testes através do Swagger:
+
+🔗 **[Acesse o Swagger UI aqui](https://clinica-api-pkwl.onrender.com/swagger-ui/index.html)**
+
+---
+
+## 🔐 Credenciais de Teste (Admin)
+
+Para utilizar os endpoints protegidos, utilize o usuário administrador padrão já cadastrado no banco de dados:
+
+| Campo | Valor |
+| :--- | :--- |
+| **Login** | `admin@email.com` |
+| **Senha** | `123456` |
+
+> **Nota:** Para acessar os endpoints, primeiro realize o login no endpoint `/login` para obter o Token JWT e, em seguida, utilize o botão **"Authorize"** no topo do Swagger.
+
+---
+
 ## 🚀 Tecnologias utilizadas
 
 - Java 17
@@ -47,13 +68,6 @@ Configurar o MySQL para suportar caracteres UTF-8 (ou conforme sua necessidade).
 
 ```bash
 git clone https://github.com/Murilo-dev09/clinica-api.git
-
-
-# 📄 Documentação da API
-
-Swagger disponível em:
-http://localhost:8080/swagger-ui/index.html(logo mais estara em deploy)
-
 
 👨‍💻 Autor
 Desenvolvido por Murilo
