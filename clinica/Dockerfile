@@ -1,10 +1,10 @@
-# Etapa de compilação (Build)
+# Etapa de compilação
 FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
 RUN mvn clean package -DskipTests
 
 # Etapa de execução
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/*.jar app.jar
+COPY --from=build /target/*.jar /app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
