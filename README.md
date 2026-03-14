@@ -20,7 +20,7 @@ Para utilizar os endpoints protegidos, utilize o usuário administrador padrão 
 
 | Campo | Valor |
 | :--- | :--- |
-| **Login** | `admin@email.com` |
+| **Login** | `admin` |
 | **Senha** | `123456` |
 
 > **Nota:** Para acessar os endpoints, primeiro realize o login no endpoint `/login` para obter o Token JWT e, em seguida, utilize o botão **"Authorize"** no topo do Swagger.
