@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @OpenAPIDefinition(
         info = @Info(title = "Clinica API", version = "v1"),
-        // Esta linha abaixo é o que faz o Swagger enviar o token automaticamente
         security = @SecurityRequirement(name = "bearerAuth")
 )
 @SecurityScheme(
