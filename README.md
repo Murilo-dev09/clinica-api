@@ -36,6 +36,7 @@ Para utilizar os endpoints protegidos, utilize o usuário administrador padrão 
 - MySQL
 - Flyway
 - Maven
+- Swagger
 
 ---
 
