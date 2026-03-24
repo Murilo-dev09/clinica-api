@@ -26,7 +26,7 @@ public class TokenService {
                     .withIssuer("ClinicaApi")
                     .withSubject(usuario.getLogin())
                     .withClaim("id", usuario.getId())
-                    .withExpiresAt(dataExpericao())
+                    .withExpiresAt(dataExpiracao())
                     .sign(algoritmo);
         } catch (JWTCreationException exception){
             throw new RuntimeException("Erro ao gerar o Token", exception);
@@ -47,7 +47,7 @@ public class TokenService {
         }
     }
 
-    private Instant dataExpericao(){
+    private Instant dataExpiracao(){
         return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
     }
 }
